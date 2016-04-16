@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+<!DOCTYPE mapper    
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.guili.ecshop.dao.hunsha.IHunshaZhaoDao">
+
+	 <!-- 要对应到所有属性 才能使用-->
+	 <resultMap id="hunshaZhaoMap" type="hunshaZhao">
+	 	<result property="id" column="id"/>
+	 	<result property="groupName" column="groupName"/>
+	 	<result property="addressId" column="addressId"/>
+	 	<result property="companyName" column="companyName"/>
+		<result property="keywords" column="keywords"/>
+		<result property="headTupian" column="headTupian"/>
+		<result property="tupians" column="tupians"/>
+		<result property="companyId" column="companyId"/>
+	 </resultMap>
+	 
+	<!-- 保存婚纱-->
+	<insert id="saveHunshaZhao"   useGeneratedKeys="true" keyProperty="id" parameterType="org.guili.ecshop.bean.hunsha.HunshaZhao" >
+	  <![CDATA[ 
+	  insert into hunshazhao
+	  				 (groupName,addressId,companyName,keywords,headTupian,tupians,companyId)
+	  				values (#{groupName},#{addressId},#{companyName},#{keywords},#{headTupian},#{tupians},#{companyId})
+	  ]]>
+ 	</insert>
+ 	
+ 	 <!-- 查询婚纱照集数量-->
+ <select id="selectHunshaZhaoCount" parameterType="Map" resultType="Integer">
+   
+  	select count(1) from hunshazhao 
+  	<where> 
+  	1=1
+    <if test="adressId !=null">
+	    AND addressId = #{adressId}
+	</if>
+	<if test="companyId !=null">
+	    AND companyId = #{companyId}
+	</if>
+    </where>
+ </select>
+ 
+    <!-- 根据id查询用户-->
+ <select id="selectHunshaZhao" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaZhao">
+  	select * from hunshazhao 
+  	where 1=1 
+	  	<if test="id !=null">
+	      and  id = #{id}
+	    </if>
+ </select>
+ 
+  <!-- 分页查询婚纱照信息-->
+ <select id="selectHunshaZhaoPage" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaZhao">
+  	select * from hunshazhao 
+  	<where> 
+  	1=1
+    <if test="adressId !=null">
+	    AND addressId = #{adressId}
+	</if>
+	<if test="companyId !=null">
+	    AND companyId = #{companyId}
+	</if>
+		order by id desc
+    <if test="start !=null and pageSize!=null">
+    	limit #{start},#{pageSize} 
+    </if>
+    </where>
+ </select>
+ 
+ 
+</mapper>

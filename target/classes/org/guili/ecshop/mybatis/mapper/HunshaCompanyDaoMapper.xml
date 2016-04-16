@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+<!DOCTYPE mapper    
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.guili.ecshop.dao.hunsha.IHunshaCompanyDao">
+
+	 <!-- 要对应到所有属性 才能使用-->
+	 <resultMap id="hunshaCompanyMap" type="hunshaCompany">
+	 	<result property="id" column="id"/>
+	 	<result property="addressId" column="addressId"/>
+	 	<result property="companyName" column="companyName"/>
+	 	<result property="companyAddress" column="companyAddress"/>
+		<result property="orderId" column="orderId"/>
+		<result property="status" column="status"/>
+	 </resultMap>
+	 
+	 <!-- 查询婚纱通过id-->
+	 <select id="selectHunshaCompany" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaCompany">
+	  	select * from hunsha_company  
+	  	where 1=1 
+		  	<if test="id !=null">
+		      and  id = #{id}
+		    </if>
+	 </select>
+	 
+	<!-- 保存婚纱-->
+	<insert id="saveHunshaCompany"   useGeneratedKeys="true" keyProperty="id" parameterType="hunshaCompany" >
+	  <![CDATA[ 
+	  insert into hunsha_company
+	  				 (addressId,companyName,companyAddress,orderId,status)
+	  				values (#{addressId},#{companyName},#{companyAddress},#{orderId},#{status})
+	  ]]>
+ 	</insert>
+ 
+ 
+</mapper>

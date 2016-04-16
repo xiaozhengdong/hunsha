@@ -1,0 +1,179 @@
+@charset "utf-8";
+ tr{
+  	padding:5px;
+  	font-size: 14px;
+  }
+  table{
+  	margin: auto;
+  }
+  .tdright{
+  	padding-left:5px;
+  }
+  .tdleft{
+  	padding:5px;
+  }
+  .process {
+	margin: 20px 0;
+	font-size: 14px;
+	overflow: hidden;
+	zoom: 1;
+	margin-left: 180px;
+  }
+  .process .l-bg {
+float: left;
+background: url(../../img/chongwu/process.png) 0 -156px;
+width: 10px;
+height: 34px;
+}
+.process .r-bg {
+float: right;
+background: url(../../img/chongwu/process.png) 0 -117px;
+width: 10px;
+height: 34px;
+}
+  .process li {
+	float: left;
+	background: url(../../img/chongwu/process.png) 0 -195px repeat-x;
+	height: 34px;
+	line-height: 34px;
+	width: 326px;
+	text-align: center;
+	}
+	
+	.process .active {
+		font-weight: bold;
+		color: #fbfbd1;
+		background: url(../../img/chongwu/process.png) repeat-x;
+	}
+	.process .xh {
+font-size: 18px;
+margin-right: 5px;
+font-family: \5b8b\4f53;
+vertical-align: -1px;
+}
+	i {
+	color: #f33;
+	font-style: normal;
+	}
+	input#id_title {
+width: 428px;
+}
+
+.space label {
+margin-right: 10px;
+display: inline-block;
+padding-bottom: 5px;
+}
+.space label input[type="radio"] {
+width: 16px;
+}
+.space label input {
+margin-right: 5px;
+_margin: 2px;
+vertical-align: -1px;
+}
+.input2 {
+width: 80px;
+}
+.input1, .input2 {
+height: 20px;
+}
+.input1, .input2, .textarea1, .input3 {
+border: 1px solid #cdcbcb;
+padding: 0 5px;
+}
+
+.textarea1, .txtarea_ms {
+width: 428px;
+font-size: 14px;
+line-height: 18px;
+padding: 5px;
+}
+
+.input1, .input2, .textarea1, .input3 {
+border: 1px solid #cdcbcb;
+padding: 0 5px;
+}
+.textarea1{
+color: grey;
+font-size: 12px;
+}
+
+.btn-style2 {
+height: 32px;
+background: #fd8000;
+color: #fff;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+width: 125px;
+margin-top: 20px;
+border: 0;
+font-family: \5b8b\4f53;
+}
+.space label {
+margin-right: 10px;
+display: inline-block;
+}
+.space label input[type="radio"] {
+width: 16px;
+}
+.space label input {
+margin-right: 5px;
+_margin: 2px;
+vertical-align: -1px;
+}
+input[type="checkbox" i] {
+-webkit-appearance: checkbox;
+box-sizing: border-box;
+}
+input[type="radio" i], input[type="checkbox" i] {
+margin: 3px 0.5ex;
+padding: initial;
+background-color: initial;
+border: initial;
+}
+input, input[type="password" i], input[type="search" i] {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 2px inset;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+}
+input[type='text'], input[type='password'] {
+line-height: normal !important;
+}
+.add-detail input {
+vertical-align: -2px;
+}
+.checkboxright{
+margin-right: 28px;
+}
+
+.validatorError {
+background: url(http://stacdn201.ganjistatic1.com/src/image/validator/pub/onError.png) no-repeat 5px 5px;
+white-space: nowrap;
+color: #ec3701 !important;
+}
+.validatorMsg {
+padding: 0 5px 0 15px;
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+display: inline-block;
+_vertical-align: top;
+display:none;
+}
+.marginright5{
+margin-right: 5px;
+}
+.marginright10{
+margin-right: 10px;
+}

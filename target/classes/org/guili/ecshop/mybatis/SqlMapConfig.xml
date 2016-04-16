@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
+<configuration>
+	<!-- 对象别名 ，用在mapper里面代替整个对象的访问-->
+    <typeAliases>
+       <typeAlias alias="lcMember" type="org.guili.ecshop.business.member.Member"/>
+        <typeAlias alias="hunshaCompany" type="org.guili.ecshop.bean.hunsha.HunshaCompany"/>
+        <typeAlias alias="hunshaZhao" type="org.guili.ecshop.bean.hunsha.HunshaZhao"/>
+    </typeAliases>
+	<mappers>
+		<!-- 数据库映射文件 -->
+	    <mapper resource="org/guili/ecshop/mybatis/mapper/LcMemberMapper.xml"/>
+	    <mapper resource="org/guili/ecshop/mybatis/mapper/HunshaCompanyDaoMapper.xml"/>
+	    <mapper resource="org/guili/ecshop/mybatis/mapper/HunshaZhaoDaoMapper.xml"/>
+	</mappers>
+</configuration> 
