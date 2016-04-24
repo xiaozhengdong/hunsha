@@ -1,6 +1,7 @@
 org\guili\ecshop\util\chongwu\RegExTools.class
 org\guili\ecshop\bean\spider\yinhang\ProductTypeConstants.class
 org\guili\ecshop\business\impl\product\MilanSpider.class
+org\guili\ecshop\business\impl\product\HunShaType.class
 org\guili\ecshop\util\common\DomainUtil.class
 org\guili\ecshop\business\member\ILcMemberService.class
 org\guili\ecshop\bean\hunsha\HunShaSpiderCompanyEnum.class
@@ -9,6 +10,7 @@ org\guili\ecshop\business\impl\product\MilanSpider$HunShaBigImgHandler.class
 org\guili\ecshop\business\product\IHunshaZhaoService.class
 org\guili\ecshop\util\common\CookieUtil.class
 org\guili\ecshop\bean\spider\PageExperienceParam.class
+org\guili\ecshop\bean\hunsha\HunshaZhaoTagVO.class
 org\guili\ecshop\util\FileTools.class
 org\guili\ecshop\bean\ResultBean.class
 org\guili\ecshop\bean\spider\PageParam.class
@@ -61,6 +63,7 @@ org\guili\ecshop\util\common\jsspider\SpiderTest.class
 org\guili\ecshop\controller\common\BaseProfileController.class
 org\guili\ecshop\interceptor\UserDetailsInterceptor.class
 org\guili\ecshop\exception\RemoteServiceException$EmptyResponseContent.class
+org\guili\ecshop\bean\hunsha\HunshaZhaoTag.class
 org\guili\ecshop\exception\RemoteServiceException.class
 org\guili\ecshop\util\common\YingHangConstants.class
 org\guili\ecshop\util\common\EncodeTag.class

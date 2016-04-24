@@ -14,6 +14,7 @@ public class HunshaZhao {
  	private Integer companyId;//顺序
  	
  	private List<String> allTupians;
+ 	private List<HunshaZhaoTag> tags;
  	
 	public Integer getId() {
 		return id;
@@ -69,5 +70,13 @@ public class HunshaZhao {
 	public void setAllTupians(List<String> allTupians) {
 		this.allTupians = allTupians;
 	}
+	public List<HunshaZhaoTag> getTags() {
+		return tags;
+	}
+	public void setTags(List<HunshaZhaoTag> tags) {
+		this.tags = tags;
+	}
+	
+	
 	
 }

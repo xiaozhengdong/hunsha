@@ -165,6 +165,8 @@
           <string>views/help/lianxi_detail.jsp</string>
           <string>views/help/success.jsp</string>
           <string>views/help/success_detail.jsp</string>
+          <string>views/hunsha/hunsha_back_home.jsp</string>
+          <string>views/hunsha/hunsha_back_one.jsp</string>
           <string>views/hunsha/hunsha_detail.jsp</string>
           <string>views/hunsha/hunsha_home.jsp</string>
           <string>views/member/licai_login.jsp</string>
@@ -204,6 +206,8 @@
           <string>WEB-INF/classes/org/guili/ecshop/bean/hunsha/HunShaSpiderCompanyEnum.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/bean/hunsha/HunshaZhao.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/bean/hunsha/HunshaZhaoBean.class</string>
+          <string>WEB-INF/classes/org/guili/ecshop/bean/hunsha/HunshaZhaoTag.class</string>
+          <string>WEB-INF/classes/org/guili/ecshop/bean/hunsha/HunshaZhaoTagVO.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/bean/payment/SalesOrder.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/bean/ResultBean.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/bean/spider/LcProduct.class</string>
@@ -234,6 +238,7 @@
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/HunShaDPSpider.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/HunShaSpiderParent.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/HunShaSpiderType.class</string>
+          <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/HunShaType.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/HunshaZhaoService.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/LcProductLogService.class</string>
           <string>WEB-INF/classes/org/guili/ecshop/business/impl/product/MilanSpider$1.class</string>

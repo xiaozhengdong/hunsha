@@ -25,6 +25,43 @@
 	  ]]>
  	</insert>
  	
+ 	<!-- 对应userDao中的updateUser方法 -->
+   <update id="updateHunshaZhaoKeyWords" parameterType="Map">
+           	   update  hunshazhao
+           	   		set keywords = #{keywords}
+               where id = #{id};
+   </update>
+ 	
+ 	<!-- 保存婚纱照标签-->
+	<insert id="saveHunshaZhaoTag"   useGeneratedKeys="true" keyProperty="id" parameterType="org.guili.ecshop.bean.hunsha.HunshaZhaoTag" >
+	  <![CDATA[ 
+	  insert into hunshazhao_tag
+	  				 (hunsha_id,tag_id,tag_name)
+	  				values (#{hunsha_id},#{tag_id},#{tag_name})
+	  ]]>
+ 	</insert>
+ 	
+ 	    <!-- 根据标签和婚纱id-->
+ <select id="selectByTagIdAndHunshaId" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaZhaoTag">
+  	select * from hunshazhao_tag 
+  	where 1=1 
+	  	<if test="hunsha_id !=null">
+	      and  hunsha_id = #{hunsha_id}
+	    </if>
+	    <if test="tag_id !=null">
+	      and  tag_id = #{tag_id}
+	    </if>
+ </select>
+ 
+ 	    <!-- 根据标签和婚纱id-->
+ <select id="selectByHunshaId" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaZhaoTag">
+  	select * from hunshazhao_tag 
+  	where 1=1 
+	  	<if test="hunsha_id !=null">
+	      and  hunsha_id = #{hunsha_id}
+	    </if>
+ </select>
+ 	
  	 <!-- 查询婚纱照集数量-->
  <select id="selectHunshaZhaoCount" parameterType="Map" resultType="Integer">
    

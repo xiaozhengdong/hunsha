@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.guili.ecshop.bean.hunsha.HunShaPageParam;
 import org.guili.ecshop.bean.hunsha.HunshaZhao;
+import org.guili.ecshop.bean.hunsha.HunshaZhaoTag;
 
 /**
  * 婚纱公司dao
@@ -37,5 +38,27 @@ public interface IHunshaZhaoDao {
 	 * @return
 	 */
 	public Integer saveHunshaZhao(HunshaZhao HunshaZhao) throws Exception;
+	
+	/**
+	 *更新婚纱照信息
+	 * @return
+	 */
+	public Integer updateHunshaZhaoKeyWords(HunshaZhao HunshaZhao) throws Exception;
+	
+	/**
+	 *保存婚纱公司
+	 * @return
+	 */
+	public Integer saveHunshaZhaoTag(HunshaZhaoTag HunshaZhao) throws Exception;
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 * @throws Exception
+	 */
+	public HunshaZhaoTag selectByTagIdAndHunshaId(Integer hunsha_id,Integer tag_id) throws Exception;
+	
+	public List<HunshaZhaoTag> selectByHunshaId(Integer hunsha_id) throws Exception;
 	
 }

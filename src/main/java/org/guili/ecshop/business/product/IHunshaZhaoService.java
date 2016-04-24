@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.guili.ecshop.bean.hunsha.HunShaPageParam;
 import org.guili.ecshop.bean.hunsha.HunshaZhao;
+import org.guili.ecshop.bean.hunsha.HunshaZhaoTag;
+import org.guili.ecshop.bean.hunsha.HunshaZhaoTagVO;
 
 /**
  * 婚纱服务接口
@@ -42,5 +44,13 @@ public interface IHunshaZhaoService {
 	 * @return
 	 */
 	public Integer saveHunshaZhao(HunshaZhao HunshaZhao) throws Exception;
+	
+	/**
+	 * 更新婚纱照标签，关键字
+	 * @param hunshaZhaoTagVO
+	 */
+	public void updateHunshaZhao(HunshaZhaoTagVO hunshaZhaoTagVO);
+	
+	public List<HunshaZhaoTag> selectByHunshaId(Integer hunsha_id) throws Exception ;
 	
 }
