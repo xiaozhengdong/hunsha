@@ -48,9 +48,6 @@
 					
 					//获取婚纱id
 					var keywords=$("#keywords").val();
-					alert(tagids);
-					alert(keywords);
-					alert(hunshaId);
 					//加载子类别数据
 					$.ajax({
 		  				url:"${pageContext.request.contextPath}/hunsha/addTag.htm",
@@ -59,7 +56,7 @@
 		  				dataType:"json",
 		  				async:false,
 		  				success:function(data){
-		  					alert(1);
+		  					alert("success");
 		  				},
 		  				error:function(data){
 		  				}

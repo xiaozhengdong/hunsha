@@ -40,6 +40,15 @@
 		</div>
 		<jsp:include page="/views/commons/hunsha_header_content.jsp"></jsp:include>
 		<div class="p_goods_container">
+			<ul class="nav nav-pills" style="margin-left: 80px; position: relative;">
+                    <li class="disabled" style="position: absolute; left: -80px;">
+                        <a href="#">婚纱风格</a>
+                    </li>
+                    <li class=""><a href="/hunsha---1.htm">全部</a></li>
+                    <c:forEach  var="type" items="${hunShaTypes}" varStatus="index">
+                    	<li class=""><a href="/hunsha-${type.id}--1.htm">${type.name}</a></li>
+                    </c:forEach>
+            </ul>
             <ul class="clearfix pro_list">
             <c:forEach  var="product" items="${bList}" varStatus="index">
 				<li class="brand_new">
@@ -59,6 +68,7 @@
 		         </li>
 		    </c:forEach>
             </ul>
+            <jsp:include page="/views/commons/page.jsp"></jsp:include>
         </div>
 		<jsp:include page="/views/commons/hunsha_footer.jsp"></jsp:include>
 		<div class="none">

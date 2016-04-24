@@ -99,12 +99,12 @@ public class HunShaController extends BaseProfileController {
 		//查询一页数据
 		goodProductList=hunshaZhaoService.selectHunshaZhaoPage(pager.getStartRow(), pager.getPageSize(),hunShaPageParam);
 		
-//		Map<String, Map<String, PetAddress>> addressPetMap=petAddressService.initAddressPetMap();
-//		List<PetAddress> petAddressList=petAddressService.selectAllPetAddress();
 		//商品列表信息回显
 		request.setAttribute("bList", goodProductList);
-//		request.setAttribute("petAddressList", petAddressList);
 		request.setAttribute("pageParam", hunShaPageParam);
+		//所有标签
+		HunShaType[] hunShaTypes=HunShaType.values();
+		request.setAttribute("hunShaTypes", hunShaTypes);
 		//设置菜单栏
 		request.setAttribute("menu", "dog");
 		return "hunsha/hunsha_home";
@@ -152,8 +152,12 @@ public class HunShaController extends BaseProfileController {
 		
 		//商品列表信息回显
 		request.setAttribute("bList", goodProductList);
-//		request.setAttribute("petAddressList", petAddressList);
 		request.setAttribute("pageParam", hunShaPageParam);
+		
+		//所有标签
+		HunShaType[] hunShaTypes=HunShaType.values();
+		request.setAttribute("hunShaTypes", hunShaTypes);
+		
 		//设置菜单栏
 //		request.setAttribute("menu", "dog");
 		return "hunsha/hunsha_home";
@@ -241,7 +245,6 @@ public class HunShaController extends BaseProfileController {
 		//婚纱详细信息
 		HunshaZhao hunshaZhao=hunshaZhaoService.selectHunshaZhao(id);
 		
-		HunShaType[] hunShaTypes=HunShaType.values();
 		//婚纱标签列表
 		
 		if(hunshaZhao==null){
@@ -251,6 +254,9 @@ public class HunShaController extends BaseProfileController {
 		hunshaZhao.setTags(this.createHunshaZhaoTags(id));
 		
 		request.setAttribute("product", hunshaZhao);
+		
+		//所有标签
+		HunShaType[] hunShaTypes=HunShaType.values();
 		request.setAttribute("hunShaTypes", hunShaTypes);
 		return "hunsha/hunsha_back_one";
 	}

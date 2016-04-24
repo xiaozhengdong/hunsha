@@ -65,14 +65,14 @@
  	 <!-- 查询婚纱照集数量-->
  <select id="selectHunshaZhaoCount" parameterType="Map" resultType="Integer">
    
-  	select count(1) from hunshazhao 
+  	select count(distinct h.id) from hunshazhao h left JOIN hunshazhao_tag t on h.id=t.hunsha_id 
   	<where> 
   	1=1
-    <if test="adressId !=null">
-	    AND addressId = #{adressId}
+    <if test="typeId !=null">
+	    AND t.tag_id = #{typeId}
 	</if>
 	<if test="companyId !=null">
-	    AND companyId = #{companyId}
+	    AND h.companyId = #{companyId}
 	</if>
     </where>
  </select>
@@ -88,14 +88,14 @@
  
   <!-- 分页查询婚纱照信息-->
  <select id="selectHunshaZhaoPage" parameterType="Map" resultType="org.guili.ecshop.bean.hunsha.HunshaZhao">
-  	select * from hunshazhao 
-  	<where> 
+  	select distinct h.* from hunshazhao h left JOIN hunshazhao_tag t on h.id=t.hunsha_id
+  	<where>
   	1=1
-    <if test="adressId !=null">
-	    AND addressId = #{adressId}
+    <if test="typeId !=null">
+	    AND t.tag_id = #{typeId}
 	</if>
 	<if test="companyId !=null">
-	    AND companyId = #{companyId}
+	    AND h.companyId = #{companyId}
 	</if>
 		order by id desc
     <if test="start !=null and pageSize!=null">

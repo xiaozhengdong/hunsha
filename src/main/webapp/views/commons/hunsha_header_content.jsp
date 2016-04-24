@@ -25,12 +25,12 @@
 </div>
 <div class="prenav">
 	  <div class="prenav-content">
-	   <a class="prenav-img" href="${_contextPath}/index.htm">
+	   <a class="prenav-img" href="http://www.womaime.com/index.htm">
 	    <img src="/img/hunsha/hunsha.jpg">
 	   </a>
 	   <div class="prenav-wenzi">
 	    <ul>
-	     	<li class="${menu eq 'dog'?'cur':''}"><a href="${_contextPath}/index.htm">婚纱照</a></li>
+	     	<li class="${menu eq 'dog'?'cur':''}"><a href="http://www.womaime.com/index.htm">婚纱照</a></li>
 	    </ul>
 	   </div>
 	  </div>

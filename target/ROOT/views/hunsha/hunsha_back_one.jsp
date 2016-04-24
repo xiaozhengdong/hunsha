@@ -48,9 +48,6 @@
 					
 					//获取婚纱id
 					var keywords=$("#keywords").val();
-					alert(tagids);
-					alert(keywords);
-					alert(hunshaId);
 					//加载子类别数据
 					$.ajax({
 		  				url:"${pageContext.request.contextPath}/hunsha/addTag.htm",
@@ -59,7 +56,7 @@
 		  				dataType:"json",
 		  				async:false,
 		  				success:function(data){
-		  					alert(1);
+		  					alert("success");
 		  				},
 		  				error:function(data){
 		  				}
@@ -96,7 +93,7 @@
 			                  <a href="/hunsha/detail-${product.id}.htm" target="_blank">${product.groupName }</a>
 			                  <a class="s_info_story is_story1" href="/hunsha/addTagDetail.htm?id=${product.id}" target="_blank"><span>${product.groupName }</span><i class="s_info_story_arrow"></i></a>
 		                  	 <span>关键字：</span>
-		                 	 <a href="/hunsha/detail-${product.id}.htm" target="_blank">${product.keywords}</a>
+		                 	 <%-- <a href="/hunsha/detail-${product.id}.htm" target="_blank">${product.keywords}</a> --%>
 		                  </p>
 		                  <p class="b_f_brand"><span>标签：</span>
 			                  <c:forEach  var="tag" items="${product.tags}" varStatus="index">
@@ -108,7 +105,7 @@
 		         </li>
 		         <li class="brand_new">
 			         <div>关键字描述：</div>
-			         <textarea style="width: 300px;height: 400px;"  id="keywords"></textarea>
+			         <textarea style="width: 300px;height: 400px;"  id="keywords">${product.keywords}</textarea>
 		         </li>
 		         <li class="brand_new">
 			         <div>标签：</div>
@@ -119,7 +116,7 @@ margin-right: 10px;" name="tags" type="checkbox" id="${tag.name}_${tag.id}" valu
 			          </c:forEach>
 			         </div>
 		         </li>
-		         <input type="text" id="hunshaId" value="${product.id}" />
+		         <input type="hidden" id="hunshaId" value="${product.id}" />
             </ul>
             <div style="padding-top: 425px;"> 
             		<button id="AddTags" style="width: 140px;height: 40px;"  tabindex="4" type="button" onclick="addTags();">

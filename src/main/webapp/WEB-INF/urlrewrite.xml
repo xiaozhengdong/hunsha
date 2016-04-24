@@ -47,10 +47,10 @@
     <rule>
         <note>婚纱照列表页</note>
         <from>^/hunsha-(.*)?-(.*)?-(.*)?\.htm$</from>
-        <to type="forward">/hunsha.htm?adressId=$1&amp;companyId=$2&amp;pageNum=$3</to>
+        <to type="forward">/hunsha.htm?typeId=$1&amp;companyId=$2&amp;pageNum=$3</to>
     </rule>
     <outbound-rule>
-        <from>^/hunsha\.htm\?adressId=(.*)&amp;companyId=(.*)&amp;pageNum=(.*)</from>
+        <from>^/hunsha\.htm\?typeId=(.*)&amp;companyId=(.*)&amp;pageNum=(.*)</from>
         <to last="true">/hunsha-$1-$2-$3.htm</to>
     </outbound-rule>
     <!-- 婚纱照详细页 -->
